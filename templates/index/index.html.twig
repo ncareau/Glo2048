@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Play 2048 in a glo board !</h1>
+
+
+        To start a game, provide a valid <b>Personal Access Token</b> from <a href="https://account.gitkraken.com/pats">https://account.gitkraken.com/pats</a><br/>
+        <img class="img-fluid" src="{{ asset('img/howto2.PNG') }}"><br/>
+        Give Board Read and Write access only.<br/>
+        <br/>
+        The PAT is temporarily stored in session, no database is connected to this app.<br/> Please use at your own risk.<br/>
+        <br/>
+
+        <br/>
+
+        <form method="post" action="{{ url('new') }}">
+
+            <input type="password" class="form-control" name="pat" placeholder="PAT Key"><br/>
+
+            <input type="submit" class="btn btn-primary" value="Start new game">
+        </form>
+
+        <br/>
+        <br/>
+        Github:<br/>
+        <a href="https://github.com/ncareau/Glo2048">https://github.com/ncareau/Glo2048</a>
+
+    </div>
+{% endblock %}

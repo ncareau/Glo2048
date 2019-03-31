@@ -1,0 +1,10 @@
+
+
+.container {
+    max-width: 1700px;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+}

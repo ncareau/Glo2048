@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+
+    <div class="container h-100">
+
+        <div class="row h-100">
+            <div class="col-10">
+                <iframe src="https://app.gitkraken.com/glo/board/{{ board_id }}" width="100%" height="100%"></iframe>
+
+            </div>
+            <div class="col-2 text-center">
+
+                <h2 style="margin-top: 1em;">Play 2048 in Glo</h2>
+
+                <button class="btn btn-primary" data-toggle="modal" data-target="#howtoModal"> Howto
+                    <i class="fas fa-info-circle"></i>
+                </button>
+
+                <div style="margin-top: 1em;" id="start-div">
+                    <button class="btn btn-primary" id="start-game">New Game <i class="fas fa-gamepad"></i></button>
+                </div>
+
+                <div style="margin-top: 1em;" id="control-div" class="d-none">
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4 text-center">
+                            <button class="btn btn-lg btn-primary" id="press-up"><i class="fas fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 text-right">
+                            <button class="btn btn-lg btn-primary" id="press-left"><i class="fas fa-angle-left"></i>
+                            </button>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-5 text-left">
+                            <button class="btn btn-lg btn-primary" id="press-right"><i class="fas fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4 text-center">
+                            <button class="btn btn-lg btn-primary" id="press-down"><i class="fas fa-angle-down"></i>
+                            </button>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                </div>
+
+                <div class="text-left" style="margin-top: 150%">
+{#                    <div style="margin-top: 2em;">#}
+{#                        <h3>Debug :</h3>#}
+{#                        <b>Board ID:</b> <span id="board_id">{{ board_id|escape }}</span>#}
+{#                        <b>Column ID:</b> <span id="column_id">{{ column_id|escape }}</span>#}
+{#                        <b>PlayField Column ID:</b> <span id="columnfield_id">{{ columnfield_id|escape }}</span>#}
+{#                    </div>#}
+
+                    <div style="margin-top: 2em;">
+                        <a href="https://nmc.dev">https://nmc.dev</a><br/>
+                        <a href="https://www.gitkraken.com/glo-api-contest">gitkraken.com/glo-api-contest</a>
+                        <br/><br/><br/>
+                        Credits:<br/>
+                        <a href="https://github.com/gabrielecirulli/2048">github.com/gabrielecirulli/2048</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="howtoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">How to</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <h4>To play the game, you have to set the correct view in glo.</h4>
+
+                    1. Move to calendar mode <br/>
+                    2. Change date to April 1st 2019. <br/>
+
+
+                    <br/>
+                    <img class="img-fluid" src="{{ asset('img/howto1.png') }}">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+
+    <script>
+        var url_start = "{{ url('start', {'id':board_id}) }}";
+        var url_up = "{{ url('move', {'id':board_id,'dir':'up'}) }}";
+        var url_left = "{{ url('move', {'id':board_id,'dir':'left'}) }}";
+        var url_right = "{{ url('move', {'id':board_id,'dir':'right'}) }}";
+        var url_down = "{{ url('move', {'id':board_id,'dir':'down'}) }}";
+
+    </script>
+
+    <script src="/main.js"></script>
+{% endblock %}
+
+
