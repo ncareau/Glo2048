@@ -7,6 +7,9 @@ I am using PHP 7.2 and the symfony framework to take care of the game engine and
 
 There is probably a few bugs and security was not my primary goal, so please use at your own risk. 
 
+* Website : https://glo2048.nmc.dev
+* Video : https://www.youtube.com/watch?v=RS4pcBiKc7s
+
 ## Why
 
 For fun, swag and a chance to win a price : https://www.gitkraken.com/glo-api-contest
@@ -20,7 +23,7 @@ You can find me on github at https://github.com/ncareau
 2048 
 https://github.com/gabrielecirulli/2048
 Copyright (c) 2014 Gabriele Cirulli
-
+ 
 
 https://support.gitkraken.com/developers/webhooks/overview/
 https://gloapi.gitkraken.com/v1/docs/#/Columns/delete_boards__board_id__columns__column_id_
