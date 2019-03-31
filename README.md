@@ -8,7 +8,13 @@ I am using PHP 7.2 and the symfony framework to take care of the game engine and
 There is probably a few bugs and security was not my primary goal, so please use at your own risk. 
 
 * Website : https://glo2048.nmc.dev
-* Video : https://www.youtube.com/watch?v=RS4pcBiKc7s
+* Video : https://youtu.be/EYOCb7yoKjk
+
+
+## Demo
+
+![Glo2048 Demo](https://glo2048.nmc.dev/img/demo1.png)
+
 
 ## Why
 
