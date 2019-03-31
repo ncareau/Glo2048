@@ -22,7 +22,7 @@ For fun, swag and a chance to win a price : https://www.gitkraken.com/glo-api-co
 
 ## Who
 
-You can find me on github at https://github.com/ncareau
+You can find me on github at https://github.com/ncareau or at https://nmc.dev
 
 ### Credits
 
@@ -32,4 +32,5 @@ Copyright (c) 2014 Gabriele Cirulli
  
 
 https://support.gitkraken.com/developers/webhooks/overview/
+
 https://gloapi.gitkraken.com/v1/docs/#/Columns/delete_boards__board_id__columns__column_id_
